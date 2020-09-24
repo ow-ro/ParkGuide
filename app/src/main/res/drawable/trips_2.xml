@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Florida Keys -->
+    <gradient
+        android:type="linear"
+        android:angle="90"
+        android:startColor="#3CA5D3"
+        android:centerColor="#ff7d7d"
+        android:endColor="#EA8959" />
+</shape>

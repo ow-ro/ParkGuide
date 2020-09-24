@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E600DA90</color>
+    <color name="colorPrimaryLight">#CBFFED</color>
+    <color name="colorPrimaryDark">#06654B</color>
+    <color name="colorAccent">#e2003c</color>
+    <color name="iconBackground">#D9FAFC</color>
+
+    <!-- Icon Colours -->
+    <color name="iconColorRed">#EF5350</color>
+    <color name="iconColorYellow">#FFD54F</color>
+    <color name="iconColorGreen">#81C784</color>
+
+    <color name="seasonalIconColor">#00793e</color>
+    <color name="winterIconColor">#0f5698</color>
+    <color name="terrainIconColor">#5e0387</color>
+
+    <color name="lightText">#ACACAC</color>
+    <color name="darkTitleText">#0c4b3a</color>
+
+    <color name="tabNotSelected">#A5A5A5</color>
+    <color name="tabSelected">#fff</color>
+
+    <!-- Popularity shades -->
+    <color name="popularity1Light">#DA4030</color>
+    <color name="popularity1Dark">#c03a2b</color>
+    <color name="popularity2Light">#ff9000</color>
+    <color name="popularity2Dark">#ff7000</color>
+    <color name="popularity3Light">#FFD54F</color>
+    <color name="popularity3Dark">#ffb400</color>
+    <color name="popularity4Light">#81C784</color>
+    <color name="popularity4Dark">#4caf51</color>
+    <color name="popularity5Light">#2e7d33</color>
+    <color name="popularity5Dark">#1b5e21</color>
+
+
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="item_name">#0c0c0c</color>
+    <color name="description">#1a1a1a</color>
+    <color name="chef">#777</color>
+    <color name="timestamp">#777</color>
+
+</resources>

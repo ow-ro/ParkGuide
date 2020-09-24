@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.NPListActivity"
+    android:id="@+id/detail_draw_layout"
+    android:fitsSystemWindows="true">
+
+
+    <LinearLayout
+        android:id="@+id/shimmerLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        tools:visibility="gone">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Adding 3 rows of placeholders -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/park_shimmer_placeholder" />
+
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".Activities.NPDetailActivity">
+
+
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/detail_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@color/colorPrimary"
+                android:elevation="4dp"
+                android:paddingBottom="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:menu="@menu/park_detail_menu"
+                app:title=" "
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                android:gravity="center"
+                app:contentInsetStartWithNavigation="0dp"
+                app:titleMarginStart="0dp" />
+
+            <FrameLayout
+                android:id="@+id/frmeLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detail_toolbar">
+
+
+                <ImageView
+                    android:id="@+id/parkBannerImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/viewTest"
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:layout_gravity="bottom"
+                    android:alpha="0.75"
+                    android:background="#9E9E9E" />
+
+            </FrameLayout>
+
+
+
+
+
+
+            <ImageView
+                android:id="@+id/parkPerson1"
+                android:layout_width="16dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/parkBikeImg"
+                app:layout_constraintStart_toStartOf="parent"
+                android:scaleType="fitCenter"/>
+            <ImageView
+                android:id="@+id/parkPerson2"
+                android:layout_width="16dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/parkBikeImg"
+                app:layout_constraintStart_toEndOf="@+id/parkPerson1"
+                android:scaleType="fitCenter"/>
+            <ImageView
+                android:id="@+id/parkPerson3"
+                android:layout_width="16dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/parkBikeImg"
+                app:layout_constraintStart_toEndOf="@+id/parkPerson2"
+                android:scaleType="fitCenter"/>
+            <ImageView
+                android:id="@+id/parkPerson4"
+                android:layout_width="16dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/parkBikeImg"
+                app:layout_constraintStart_toEndOf="@+id/parkPerson3"
+                android:scaleType="fitCenter"/>
+            <ImageView
+                android:id="@+id/parkPerson5"
+                android:layout_width="16dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/parkBikeImg"
+                app:layout_constraintStart_toEndOf="@+id/parkPerson4"
+                android:scaleType="fitCenter"/>
+
+
+
+
+
+
+            <ImageView
+                android:id="@+id/parkBikeImg"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/frmeLay"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/parkCostImg"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/parkBikeImg"
+                app:layout_constraintEnd_toStartOf="@+id/parkPetImg" />
+
+            <ImageView
+                android:id="@+id/parkPetImg"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/parkBikeImg"
+                app:layout_constraintEnd_toStartOf="@+id/parkBikeImg" />
+
+            <TextView
+                android:id="@+id/parkDescTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ubuntu"
+                android:textColor="#313131"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frmeLay"
+                tools:text="Park Description" />
+
+            <TextView
+                android:textColor="#313131"
+                android:id="@+id/parkDirectionsTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ubuntu"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/parkDescTxt"
+                tools:text="Park Directions" />
+
+
+            <ImageView
+                android:id="@+id/locationIcon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/parkDirectionsTxt"
+                android:src="@drawable/ic_location_on_24px"/>
+
+            <TextView
+                android:id="@+id/parkLocationTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/ubuntu"
+                android:textSize="13sp"
+                android:textColor="#313131"
+                android:layout_marginStart="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/locationIcon"
+                app:layout_constraintStart_toEndOf="@+id/locationIcon"
+                app:layout_constraintTop_toBottomOf="@+id/parkDirectionsTxt"
+                tools:text="Park Location" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/weatherLayout"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/parkLocationTxt">
+
+                <ImageView
+                    android:id="@+id/wIcon1"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintEnd_toStartOf="@+id/wIcon2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wDate1" />
+
+                <ImageView
+                    android:id="@+id/wIcon2"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintEnd_toStartOf="@+id/wIcon3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/wIcon1"
+                    app:layout_constraintTop_toBottomOf="@+id/wDate2" />
+
+                <ImageView
+                    android:id="@+id/wIcon3"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintEnd_toStartOf="@+id/wIcon4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/wIcon2"
+                    app:layout_constraintTop_toBottomOf="@+id/wDate3" />
+
+                <ImageView
+                    android:id="@+id/wIcon4"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintEnd_toStartOf="@+id/wIcon5"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/wIcon3"
+                    app:layout_constraintTop_toBottomOf="@+id/wDate4" />
+
+                <ImageView
+                    android:id="@+id/wIcon5"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/wIcon4"
+                    app:layout_constraintTop_toBottomOf="@+id/wDate5" />
+
+                <TextView
+                    android:id="@+id/wDate1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textAlignment="center"
+                    android:textColor="#313131"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@+id/wDate2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="date" />
+
+                <TextView
+                    android:id="@+id/wDate2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#313131"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@+id/wDate3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/wDate1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="date" />
+
+                <TextView
+                    android:id="@+id/wDate3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#313131"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@+id/wDate4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/wDate2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="date" />
+
+                <TextView
+                    android:id="@+id/wDate4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#313131"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@+id/wDate5"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/wDate3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="date" />
+
+                <TextView
+                    android:id="@+id/wDate5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#313131"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/wDate4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="date" />
+
+                <TextView
+                    android:id="@+id/wTxt1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#313131"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toStartOf="@+id/wTxt2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wIcon1"
+                    tools:text="weather" />
+
+                <TextView
+                    android:id="@+id/wTxt2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#313131"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toStartOf="@+id/wTxt3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/wTxt1"
+                    app:layout_constraintTop_toBottomOf="@+id/wIcon2"
+                    tools:text="weather" />
+
+                <TextView
+                    android:id="@+id/wTxt3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#313131"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toStartOf="@+id/wTxt4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/wTxt2"
+                    app:layout_constraintTop_toBottomOf="@+id/wIcon3"
+                    tools:text="weather" />
+
+                <TextView
+                    android:id="@+id/wTxt4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#313131"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toStartOf="@+id/wTxt5"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/wTxt3"
+                    app:layout_constraintTop_toBottomOf="@+id/wIcon4"
+                    tools:text="weather" />
+
+                <TextView
+                    android:id="@+id/wTxt5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#313131"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/wTxt4"
+                    app:layout_constraintTop_toBottomOf="@+id/wIcon5"
+                    tools:text="weather" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/parkAlertLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CardView.Light"
+                android:layout_margin="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weatherLayout">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:cardCornerRadius="0dp"
+                        app:cardPreventCornerOverlap="false"
+                        android:elevation="0dp"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/parkAlertImage"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_info" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/parkAlertLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Park Alerts"
+                        android:textColor="#313131"
+                        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+                        app:layout_constraintStart_toEndOf="@+id/cardView"
+                        app:layout_constraintTop_toTopOf="@+id/cardView"
+                        android:layout_marginStart="12dp"/>
+
+                    <View
+                        android:id="@+id/parkArrowButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="3dp"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/expandableView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardView"
+                        android:animateLayoutChanges="true">
+
+                        <TextView
+                            android:id="@+id/parkAlertsTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="12dp"
+                            android:text=""
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/testLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/parkAlertLayout"
+                tools:context="ca.owro.cryptail.CurrenciesActivity">
+
+                <ca.owro.npapp.Utilities.WrappingGridView
+                    android:id="@+id/terrainGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="56dp"
+                    android:gravity="center"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="auto_fit" />
+
+            </RelativeLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/testLay">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@color/colorPrimary" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:srcCompat="@color/colorPrimary"
+                    tools:layout_editor_absoluteY="0dp" />
+
+                <TextView
+                    android:id="@+id/parkTripLengthTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#313131"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView3"
+                    tools:text="Trip Length" />
+
+                <TextView
+                    android:id="@+id/parkPrimeMonthsTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#313131"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Prime Months" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tripLengthLbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/ubuntu"
+                android:text="Trip Length"
+                android:textAlignment="center"
+                android:textColor="@color/lightText"
+                android:textSize="9sp"
+                app:layout_constraintEnd_toStartOf="@+id/primeMonthsLbl"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <TextView
+                android:id="@+id/recommendationsLbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/ubuntu"
+                android:text="Recommendations"
+                android:textAlignment="center"
+                android:textColor="@color/lightText"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/primeMonthsLbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/ubuntu"
+                android:text="Prime Months"
+                android:textAlignment="center"
+                android:textColor="@color/lightText"
+                android:textSize="9sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tripLengthLbl"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+            <TextView
+                android:id="@+id/highlightLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Highlights"
+                android:textSize="17sp"
+                android:textColor="#313131"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/primeMonthsLbl" />
+
+            <ImageView
+                android:id="@+id/highlightImg"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="6dp"
+                android:src="@drawable/ic_star"
+                app:layout_constraintBottom_toBottomOf="@+id/highlightLbl"
+                app:layout_constraintStart_toEndOf="@+id/highlightLbl"
+                app:layout_constraintTop_toTopOf="@+id/highlightLbl" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="�"
+                android:textSize="16sp"
+                android:textColor="#9C9C9C"
+                app:layout_constraintBottom_toBottomOf="@+id/highlightLbl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/highlightLbl"
+                android:tooltipText="Highlights are popular/well-known attractions in the park. Expect crowds."/>
+
+
+            <FrameLayout
+                android:id="@+id/highlightTabFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/highlightLbl">
+
+
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/highlightPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tripLengthLbl" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/highlight_tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/highlightPager"
+                    app:tabBackground="@drawable/slider_pager_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp"
+                    android:background="@android:color/transparent"/>
+
+            </FrameLayout>
+
+
+
+
+
+            <TextView
+                android:id="@+id/hiddenGemsLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Hidden Gems"
+                android:textSize="17sp"
+                android:textColor="#313131"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/highlightTabFrameLayout" />
+
+            <ImageView
+                android:id="@+id/hiddenGemImg"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="6dp"
+                android:src="@drawable/ic_diamond"
+                app:layout_constraintBottom_toBottomOf="@+id/hiddenGemsLbl"
+                app:layout_constraintStart_toEndOf="@+id/hiddenGemsLbl"
+                app:layout_constraintTop_toTopOf="@+id/hiddenGemsLbl" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="�"
+                android:textSize="16sp"
+                android:textColor="#9C9C9C"
+                app:layout_constraintBottom_toBottomOf="@+id/hiddenGemsLbl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/hiddenGemsLbl"
+                android:tooltipText="Hidden Gems are lesser-known, local favorites in the park."/>
+
+
+            <FrameLayout
+                android:id="@+id/hiddenGemsTabFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/hiddenGemsLbl">
+
+
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/hiddenGemsPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    app:layout_constraintTop_toBottomOf="@+id/hiddenGemImg" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/hidden_gems_tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hiddenGemsPager"
+                    app:tabBackground="@drawable/slider_pager_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp"
+                    android:background="@android:color/transparent"/>
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/activitiesLbl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Activities"
+                android:textColor="#313131"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hiddenGemsTabFrameLayout" />
+
+            <ImageView
+                android:id="@+id/activitiesImg"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="6dp"
+                android:src="@drawable/ic_travel"
+                app:layout_constraintBottom_toBottomOf="@+id/activitiesLbl"
+                app:layout_constraintStart_toEndOf="@+id/activitiesLbl"
+                app:layout_constraintTop_toTopOf="@+id/activitiesLbl" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="�"
+                android:textSize="16sp"
+                android:textColor="#9C9C9C"
+                app:layout_constraintBottom_toBottomOf="@+id/activitiesLbl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/activitiesLbl"
+                android:tooltipText="Available activities in the park (seasonally dependent)."/>
+
+
+            <RelativeLayout
+                android:id="@+id/relLayoutCurr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="0dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activitiesLbl"
+                tools:context="ca.owro.cryptail.CurrenciesActivity">
+
+                <ca.owro.npapp.Utilities.WrappingGridView
+                    android:id="@+id/activitiesGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="64dp"
+                    android:gravity="center"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="auto_fit" />
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/parkFunFactTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="8dp"
+                android:paddingBottom="8dp"
+                android:textAlignment="center"
+                android:textSize="11sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relLayoutCurr"
+                android:textColor="#313131"
+                tools:text="Fun Fact" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/detail_draw_nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start|left"
+        app:headerLayout="@layout/drawer_header"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="#383838"
+        app:menu="@menu/drawer_menu"
+        app:itemTextAppearance="@style/NavigationDrawerStyle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/footerLastUpdatedTxt"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="24dp"
+                android:gravity="start"
+                android:text=""
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+

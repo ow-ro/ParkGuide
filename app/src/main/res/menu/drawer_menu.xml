@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+<group android:checkableBehavior="single">
+
+            <item android:id="@+id/nav_park_list"
+                android:title="Parks"
+                android:icon="@drawable/ic_menu_mountains"/>
+            <item android:id="@+id/nav_park_map"
+                android:title="Map"
+                android:icon="@drawable/ic_menu_map"/>
+            <item android:id="@+id/nav_park_trips"
+                android:title="Trips"
+                android:icon="@drawable/ic_menu_finder"/>
+            <item android:id="@+id/nav_about"
+                android:title="About"
+                android:icon="@drawable/ic_menu_info"/>
+            <item android:id="@+id/nav_settings"
+                android:title="Settings"
+                android:icon="@drawable/ic_settings"/>
+
+</group>
+</menu>

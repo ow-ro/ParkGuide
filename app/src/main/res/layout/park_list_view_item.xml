@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+            <FrameLayout
+                android:id="@+id/listFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/listParkImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"/>
+
+                <View
+                    android:id="@+id/listTransparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom"
+                    android:alpha="1"
+                    android:background="@drawable/gradient_list_view" />
+
+
+            </FrameLayout>
+
+    <TextView
+        android:id="@+id/parkNameTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="5dp"
+        android:alpha="0.9"
+        android:fontFamily="@font/ubuntu"
+        android:gravity="bottom|start"
+        android:lines="2"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/listFrameLayout"
+        app:layout_constraintEnd_toStartOf="@+id/parkLocTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Park Name" />
+
+    <TextView
+        android:id="@+id/parkLocTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:alpha="0.9"
+        android:fontFamily="@font/ubuntu"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/listFrameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Park Location" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/visited_menu_btn"
+        android:icon="@drawable/check_empty"
+        app:showAsAction="always"
+        android:title="Visited">
+    </item>
+    <item
+        android:id="@+id/heart_menu_btn"
+        android:icon="@drawable/heart_empty"
+        app:showAsAction="always"
+        android:title="Wishlist">
+    </item>
+    <item android:title="NPS Site"
+        android:id="@+id/nps_site_menu_btn"
+        app:showAsAction="never"/>
+    <item android:title="Campgrounds"
+        android:id="@+id/nps_camp_menu_btn"
+        app:showAsAction="never"/>
+    <item android:title="Permits"
+        android:id="@+id/nps_permits_menu_btn"
+        app:showAsAction="never"/>
+</menu>

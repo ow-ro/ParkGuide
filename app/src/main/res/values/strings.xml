@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ParkGuide</string>
+    <string name="sign_in">Sign In</string>
+    <string name="facebook_application_id" translatable="false">1010871422644062</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb1010871422644062</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="tagline_placeholder">Tagline</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget hendrerit orci. Aenean ac libero mauris. Fusce mauris nisl, tincidunt eget lacinia sit amet, eleifend ut felis. Etiam vel risus id arcu pellentesque efficitur quis eget nunc. Duis a augue quis urna hendrerit pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget magna ultricies, tincidunt nunc ac, suscipit urna. Mauris ornare lacinia nunc, at vulputate lectus egestas sed.</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="default_web_client_id" translatable="false">447474318494-f569p4dsb9qct7cal0gkjhe8d50d0t52.apps.googleusercontent.com</string>
+
+    <string-array name="temp_array">
+        <item>°F</item>
+        <item>°C</item>
+    </string-array>
+
+</resources>

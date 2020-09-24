@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/reload_menu_btn"
+        android:icon="@drawable/ic_refresh"
+        app:showAsAction="always"
+        android:title="Reload">
+    </item>
+
+    <item android:title="Map Type" android:id="@+id/map_type_menu_btn">
+
+        <menu>
+
+            <item
+                android:id="@+id/map_terrain_menu_btn"
+                android:title="Terrain"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/map_satellite_menu_btn"
+                android:title="Satellite"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/map_hybrid_menu_btn"
+                android:title="Hybrid"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/map_normal_menu_btn"
+                android:title="Normal"
+                app:showAsAction="never"/>
+
+        </menu>
+
+    </item>
+
+</menu>

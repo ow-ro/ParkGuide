@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardElevation="0dp"
+    android:elevation="0dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="15dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#00ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardConLayoutItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/tripBackgroundImg"
+                android:layout_width="200dp"
+                android:layout_height="290dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tripTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="42dp"
+                android:layout_marginTop="12dp"
+                android:text="Trip name"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tripParks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="42dp"
+                android:layout_marginTop="8dp"
+                android:text="Parks"
+                android:textColor="#fff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tripTitle" />
+
+            <ImageView
+                android:id="@+id/tripLocationImg"
+                android:layout_width="24dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_trip_location"
+                app:layout_constraintBottom_toTopOf="@+id/tripTimeImg"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="2dp"
+                android:layout_marginStart="8dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"/>
+
+            <TextView
+                android:id="@+id/tripLocationTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="12dp"
+                android:text="Location"
+                android:textColor="#EEFFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tripLocationImg"
+                app:layout_constraintTop_toTopOf="@+id/tripLocationImg" />
+
+
+
+            <ImageView
+                android:id="@+id/tripTimeImg"
+                android:layout_width="24dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_trip_length"
+                app:layout_constraintBottom_toTopOf="@+id/tripCalImg"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="2dp"
+                android:layout_marginStart="8dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"/>
+
+            <TextView
+                android:id="@+id/tripTimeTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="12dp"
+                android:text="Length"
+                android:textColor="#EEFFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tripTimeImg"
+                app:layout_constraintTop_toTopOf="@+id/tripTimeImg" />
+
+            <ImageView
+                android:id="@+id/tripCalImg"
+                android:layout_width="24dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:src="@drawable/ic_trip_calendar"
+                app:layout_constraintBottom_toTopOf="@+id/tripCarImg"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="2dp"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/tripCalTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="12dp"
+                android:text="Months"
+                android:textColor="#EEFFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tripCalImg"
+                app:layout_constraintTop_toTopOf="@+id/tripCalImg" />
+
+            <ImageView
+                android:id="@+id/tripCarImg"
+                android:layout_width="24dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_trip_van"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@+id/tripBackgroundImg"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="8dp"/>
+
+
+            <TextView
+                android:id="@+id/tripCarTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="12dp"
+                android:text="Driving time"
+                android:textColor="#EEFFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tripCarImg"
+                app:layout_constraintTop_toTopOf="@+id/tripCarImg" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

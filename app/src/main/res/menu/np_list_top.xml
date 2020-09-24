@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/park_list_search"
+        android:title="Search"
+        android:queryHint="Search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:icon="@drawable/ic_search_24px"
+        app:showAsAction="always|collapseActionView" />
+
+    <group android:id="@+id/filter_group">
+
+        <item android:title="Sort" android:id="@+id/sortMenu">
+
+            <menu>
+
+                <item
+                    android:id="@+id/filterNameDesc"
+                    android:title="Name A-Z" />
+                <item
+                    android:id="@+id/filterNameAsc"
+                    android:title="Name Z-A" />
+                <item
+                    android:id="@+id/filterLocationDesc"
+                    android:title="Location A-Z" />
+                <item
+                    android:id="@+id/filterLocationAsc"
+                    android:title="Location Z-A" />
+
+                <item
+                    android:id="@+id/filterPopularityDesc"
+                    android:title="Popularity High-Low" />
+                <item
+                    android:id="@+id/filterPopularityAsc"
+                    android:title="Popularity Low-High" />
+
+            </menu>
+
+        </item>
+
+        <item android:title="Filter" android:id="@+id/filterMenu">
+
+                <menu>
+
+                    <item
+                        android:id="@+id/filterVisited"
+                        android:title="Visited Parks"
+                        android:icon="@drawable/check_filled_filter" />
+
+                    <item
+                        android:id="@+id/filterWishlist"
+                        android:title="Wishlist Parks"
+                        android:icon="@drawable/heart_filled_filter"/>
+
+                    <item
+                        android:id="@+id/filterEntranceFee"
+                        android:title="No Entrance Fee" />
+
+                    <item
+                        android:id="@+id/filterPreserve"
+                        android:title="National Preserve" />
+                    <item
+                        android:id="@+id/filterCar"
+                        android:title="Accessible By Car" />
+
+                    <item
+                        android:id="@+id/filterPets"
+                        android:title="Pet Friendly" />
+                    <item
+                        android:id="@+id/filterBikes"
+                        android:title="Bike Friendly" />
+
+                    <item android:title="Activities" android:id="@+id/filterActivities">
+                        <menu>
+                            <item
+                                android:id="@+id/filterAutoTouring"
+                                android:title="Auto Touring"
+                                android:icon="@drawable/ic_activity_auto_touring" />
+                            <item
+                                android:id="@+id/filterBicycling"
+                                android:title="Bicycling"
+                                android:icon="@drawable/ic_activity_bike" />
+                            <item
+                                android:id="@+id/filterBoating"
+                                android:title="Boating"
+                                android:icon="@drawable/ic_ferry_boat" />
+                            <item
+                                android:id="@+id/filterBackpacking"
+                                android:title="Backpacking"
+                                android:icon="@drawable/ic_activity_backpacking" />
+                            <item
+                                android:id="@+id/filterBirdwatching"
+                                android:title="Birdwatching"
+                                android:icon="@drawable/ic_activity_birdwatching" />
+                            <item
+                                android:id="@+id/filterCanyoneering"
+                                android:title="Canyoneering"
+                                android:icon="@drawable/ic_activity_canyoneering" />
+                            <item
+                                android:id="@+id/filterClimbing"
+                                android:title="Climbing"
+                                android:icon="@drawable/ic_activity_climber" />
+                            <item
+                                android:id="@+id/filterDogSledding"
+                                android:title="Dog Sledding"
+                                android:icon="@drawable/ic_activity_dogsled" />
+                            <item
+                                android:id="@+id/filterHiking"
+                                android:title="Hiking"
+                                android:icon="@drawable/ic_activity_hike" />
+                            <item
+                                android:id="@+id/filterFishing"
+                                android:title="Fishing"
+                                android:icon="@drawable/ic_activity_fish" />
+                            <item
+                                android:id="@+id/filterHorseriding"
+                                android:title="Horse Riding"
+                                android:icon="@drawable/ic_activity_horse" />
+                            <item
+                                android:id="@+id/filterIceFishing"
+                                android:title="Ice Fishing"
+                                android:icon="@drawable/ic_activity_icefish" />
+                            <item
+                                android:id="@+id/filterKayaking"
+                                android:title="Kayaking"
+                                android:icon="@drawable/ic_activity_kayak" />
+                            <item
+                                android:id="@+id/filterScubaDiving"
+                                android:title="Scuba Diving"
+                                android:icon="@drawable/ic_scuba" />
+                            <item
+                                android:id="@+id/filterSkidooing"
+                                android:title="Skidooing"
+                                android:icon="@drawable/ic_activity_snowmob" />
+                            <item
+                                android:id="@+id/filterSnorkeling"
+                                android:title="Snorkeling"
+                                android:icon="@drawable/ic_diving" />
+                            <item
+                                android:id="@+id/filterSnowshoeing"
+                                android:title="Snowshoeing"
+                                android:icon="@drawable/ic_activity_snowshoes" />
+                            <item
+                                android:id="@+id/filterStargazing"
+                                android:title="Stargazing"
+                                android:icon="@drawable/ic_activity_stargazing" />
+                            <item
+                                android:id="@+id/filterSurfing"
+                                android:title="Surfing"
+                                android:icon="@drawable/ic_surfing" />
+                            <item
+                                android:id="@+id/filterSwimming"
+                                android:title="Swimming"
+                                android:icon="@drawable/ic_activity_swimming" />
+                            <item
+                                android:id="@+id/filterTidepooling"
+                                android:title="Tidepooling"
+                                android:icon="@drawable/ic_activity_tidepool" />
+                            <item
+                                android:id="@+id/filterWhales"
+                                android:title="Whale Views"
+                                android:icon="@drawable/ic_whale" />
+                            <item
+                                android:id="@+id/filterXCSkiing"
+                                android:title="XC Skiing"
+                                android:icon="@drawable/ic_activity_xcski" />
+                        </menu>
+                    </item>
+
+                    <item android:title="Terrain" android:id="@+id/filterTerrain">
+                        <menu>
+                            <item
+                                android:id="@+id/filterBays"
+                                android:title="Bays"
+                                android:icon="@drawable/ic_sea" />
+                            <item
+                                android:id="@+id/filterBeaches"
+                                android:title="Beaches"
+                                android:icon="@drawable/ic_terrain_beach" />
+                            <item
+                                android:id="@+id/filterCanyons"
+                                android:title="Canyons"
+                                android:icon="@drawable/ic_canyon" />
+                            <item
+                                android:id="@+id/filterCaves"
+                                android:title="Caves"
+                                android:icon="@drawable/ic_cave" />
+                            <item
+                                android:id="@+id/filerCoasts"
+                                android:title="Coasts"
+                                android:icon="@drawable/ic_terrain_coast" />
+                            <item
+                                android:id="@+id/filterDeserts"
+                                android:title="Deserts"
+                                android:icon="@drawable/ic_desert" />
+                            <item
+                                android:id="@+id/filterDunes"
+                                android:title="Dunes"
+                                android:icon="@drawable/ic_dune" />
+                            <item
+                                android:id="@+id/filterForests"
+                                android:title="Forests"
+                                android:icon="@drawable/ic_terrain_forest" />
+                            <item
+                                android:id="@+id/filterGlaciers"
+                                android:title="Glaciers"
+                                android:icon="@drawable/ic_glacier" />
+                            <item
+                                android:id="@+id/filterHotSprings"
+                                android:title="Hot Springs"
+                                android:icon="@drawable/ic_sauna" />
+                            <item
+                                android:id="@+id/filterLakes"
+                                android:title="Lakes"
+                                android:icon="@drawable/ic_terrain_lake" />
+                            <item
+                                android:id="@+id/filterMountains"
+                                android:title="Mountains"
+                                android:icon="@drawable/ic_terrain_mountain" />
+                            <item
+                                android:id="@+id/filterPonds"
+                                android:title="Ponds"
+                                android:icon="@drawable/ic_terrain_pond" />
+                            <item
+                                android:id="@+id/filterPrairies"
+                                android:title="Prairies"
+                                android:icon="@drawable/ic_prairie" />
+                            <item
+                                android:id="@+id/filterRedRocks"
+                                android:title="Red Rocks"
+                                android:icon="@drawable/ic_red_rock" />
+                            <item
+                                android:id="@+id/filterReefs"
+                                android:title="Reefs"
+                                android:icon="@drawable/ic_coral" />
+                            <item
+                                android:id="@+id/filterSandstone"
+                                android:title="Sandstone"
+                                android:icon="@drawable/ic_sandstone" />
+                            <item
+                                android:id="@+id/filterVolcanoes"
+                                android:title="Volcanoes"
+                                android:icon="@drawable/ic_volcano" />
+                            <item
+                                android:id="@+id/filterWetlands"
+                                android:title="Wetlands"
+                                android:icon="@drawable/ic_terrain_swamp" />
+                        </menu>
+                    </item>
+
+                </menu>
+
+        </item>
+
+
+    </group>
+<group android:id="@+id/control_group">
+    <item android:title="Sign Out" android:id="@+id/signOutMenu" />
+</group>
+</menu>
