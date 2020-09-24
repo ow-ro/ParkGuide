@@ -1,5 +1,5 @@
 # ParkGuide
-**_ParkGuide is a detailed guidebook of all of America's National Parks, collating National Park Service information, live weather/park alert data, curated highlights/hidden gems for each park, and multi-park trip itineraries._**
+**ParkGuide is a detailed guidebook of all of America's National Parks, collating National Park Service information, live weather/park alert data, curated highlights/hidden gems for each park, and multi-park trip itineraries.**
 
 Features:
 
